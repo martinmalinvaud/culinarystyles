@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420164338) do
+ActiveRecord::Schema.define(version: 20170420173332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "culinarystyles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.text     "speciality"
+    t.string   "cardpic"
+    t.string   "banerpic"
+    t.string   "fontpic"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
