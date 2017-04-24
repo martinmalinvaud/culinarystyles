@@ -19,9 +19,12 @@ class CulinarystylesController < ApplicationController
 
   def create
     @culinarystyle = Culinarystyle.new(culinarystyle_params)
-    @culinarystyle.save
+    if @culinarystyle.save
+      redirect_to culinarystyle_path(@culinarystyle)
+    else
+      render :new
+    end
 
-    redirect_to culinarystyle_path(@culinarystyle)
   end
 
   def update

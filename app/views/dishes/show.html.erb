@@ -1,0 +1,5 @@
+<h2><%= @dish.name %></h2>
+<p><%= @dish.description %></p>
+<%= link_to "Delete", dish_path(@dish),
+      method: :delete,
+      data: { confirm: "T'es sur de vouloir supprimer un DISH ???" } %>
