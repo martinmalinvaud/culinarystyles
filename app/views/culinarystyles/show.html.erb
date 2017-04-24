@@ -1,0 +1,5 @@
+<h2><%= @culinarystyle.name %></h2>
+<p><%= @culinarystyle.description %></p>
+<%= link_to "Delete", culinarystyle_path(@culinarystyle),
+      method: :delete,
+      data: { confirm: "T'es sur de vouloir supprimer un DISH ???" } %>

@@ -3,4 +3,8 @@
 <% @culinarystyles.each do |culinarystyle| %>
   <h2><%= culinarystyle.name %></h2>
   <p><%= culinarystyle.description %></p>
+  <%= link_to culinarystyle.name, culinarystyle_path(culinarystyle) %>
 <% end %>
+<br><br>
+<%= link_to "new", new_culinarystyle_path(@culinarystyle) %>
+
