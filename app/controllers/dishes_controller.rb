@@ -1,6 +1,5 @@
 class DishesController < ApplicationController
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
-  before_action :set_culinarystyle, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show, :new, :edit, :update, :create]
 
 
@@ -48,12 +47,8 @@ class DishesController < ApplicationController
   end
 
   def dish_params
-    # *Strong params*: You need to *whitelist* what can be updated by the user
-    # Never trust user data!
-    params.require(:dish).permit(:id, :name, :description)
+    params.require(:dish).permit(:culinarystyle_id, :name, :description)
   end
 
-  def set_culinarystyle
-    @culinarystyle = Culinarystyle.find(params[:id])
-  end
+
 end

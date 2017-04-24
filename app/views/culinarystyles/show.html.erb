@@ -3,3 +3,7 @@
 <%= link_to "Delete", culinarystyle_path(@culinarystyle),
       method: :delete,
       data: { confirm: "T'es sur de vouloir supprimer un DISH ???" } %>
+
+<% @dishes.each do | dish | %>
+  <h1><%= dish.name %></h1>
+<% end %>

@@ -15,6 +15,7 @@ class CulinarystylesController < ApplicationController
   end
 
   def show
+    @dishes = @culinarystyle.dishes
   end
 
   def create
