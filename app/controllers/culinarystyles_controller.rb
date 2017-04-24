@@ -48,8 +48,6 @@ class CulinarystylesController < ApplicationController
   end
 
   def culinarystyle_params
-    # *Strong params*: You need to *whitelist* what can be updated by the user
-    # Never trust user data!
-    params.require(:culinarystyle).permit(:name, :description)
+    params.require(:culinarystyle).permit(:name, :description, :piccard, :photo_cache)
   end
 end

@@ -6,4 +6,5 @@
 
 <% @dishes.each do | dish | %>
   <h1><%= dish.name %></h1>
+  <%= cl_image_tag @culinarystyle.piccard.path, height: 800, width: 600, crop: :fill %>
 <% end %>
