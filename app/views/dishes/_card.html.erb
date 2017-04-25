@@ -1,0 +1,11 @@
+<div class="dish-card">
+  <% if dish.photo %>
+    <div class="dish-card-polaroid">
+      <%= cl_image_tag dish.photo.path, crop: :fill %>
+      <div class="dish-card-category">
+        <h2><%= dish.name%></h2>
+        <p><%= dish.description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

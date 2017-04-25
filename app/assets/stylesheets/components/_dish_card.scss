@@ -1,0 +1,41 @@
+.dish-card {
+  width: 100%;
+  h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  p {
+    text-transform: downcase;
+
+  }
+}
+
+.dish-card-polaroid {
+  background: white;
+  padding: 7px;
+  margin-top: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.dish-card-polaroid img {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.dish-card-infos {
+  opacity: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  height: 240px;
+  transition: 1000ms all ease;
+  color: $orange;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 50px;
+}

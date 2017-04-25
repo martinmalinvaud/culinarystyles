@@ -1,0 +1,24 @@
+<div class="margin-50-top">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h3>Nombre de convives ?</h3>
+        <p>Estimation aproximative (dépend: <%= link_to "du style culinaire", culinarystyles_path %>, du prestataire, du lieu...)</p>
+        <input type="number" id="nb-meals" value="80">
+        <br><br>
+        <input type="checkbox" id="starter" data-min="4" data-max="7"> Entrée
+        <input type="checkbox" id="dish" data-min="10" data-max="16" checked> Plat
+        <input type="checkbox" id="desert" data-min="4" data-max="7"> Dessert
+        <input type="checkbox" id="drink" data-min="1" data-max="3" checked> Boisson
+        <div class="module">
+          <div class="module-total">
+            <span id="totalMin">0</span>€ - <span id="totalMax">0</span>€
+          </div>
+          <div class="module-totalp">
+            <span id="totalMinp">0</span>€/p - <span id="totalMaxp">0</span>€/p
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

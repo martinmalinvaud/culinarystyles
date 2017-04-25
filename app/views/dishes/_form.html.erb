@@ -2,5 +2,6 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.association :culinarystyle, as: :radio_buttons %>
+  <%= f.input :photo, as: :attachinary %>
   <%= f.submit "add a dish", class: "btn btn-primary" %>
 <% end %>

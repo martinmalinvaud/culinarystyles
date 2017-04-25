@@ -27,15 +27,24 @@
     </div>
     <div class="col-xs-12 col-sm-8">
     <br>
-      <p>#To DO </p>
+    <% @dishes.each do |dish|%>
+      <%= dish.name %> -
+    <% end %>
+      <p><%=  %></p>
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <% @dishes.each do | dish | %>
+      <div class="col-xs-12 col-sm-6 col-lg-3">
+        <%= render "/dishes/card", dish: dish, culinarystyle: @culinarystyle %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "module" %>
 
 <%= link_to "Delete", culinarystyle_path(@culinarystyle),
       method: :delete,
       data: { confirm: "T'es sur de vouloir supprimer un DISH ??? je vais te casser la tête !!!" } %>
-
-<% @dishes.each do | dish | %>
-  <h1><%= dish.name %></h1>
-<% end %>
