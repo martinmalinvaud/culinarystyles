@@ -1,10 +1,12 @@
 <h2><%= @culinarystyle.name %></h2>
 <p><%= @culinarystyle.description %></p>
+<% if @culinarystyle.piccard? %>
+      <%= cl_image_tag @culinarystyle.piccard.path, width: 200, height: 300, crop: :fill %>
+    <% end %>
 <%= link_to "Delete", culinarystyle_path(@culinarystyle),
       method: :delete,
       data: { confirm: "T'es sur de vouloir supprimer un DISH ???" } %>
 
 <% @dishes.each do | dish | %>
   <h1><%= dish.name %></h1>
-  <%= cl_image_tag @culinarystyle.piccard.path, height: 800, width: 600, crop: :fill %>
 <% end %>

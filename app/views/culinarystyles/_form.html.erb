@@ -1,8 +1,8 @@
 <%= simple_form_for(@culinarystyle) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :piccard, label:"Photo vignette" %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :piccard, as: :attachinary, label: "Photo vigette" %>
+
 
   <%= f.submit %>
 <% end %>
