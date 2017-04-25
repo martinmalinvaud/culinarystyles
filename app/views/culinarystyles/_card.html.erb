@@ -2,7 +2,7 @@
   <%= link_to culinarystyle_path(culinarystyle) do %>
     <% if culinarystyle.piccard %>
       <div class="card-polaroid">
-        <%= cl_image_tag culinarystyle.piccard.path, crop: :fill %>
+        <%= cl_image_tag culinarystyle.piccard.path, height: 200, crop: :fill %>
         <div class="card-infos">
           <i class="fa fa-plus"></i>
         </div>

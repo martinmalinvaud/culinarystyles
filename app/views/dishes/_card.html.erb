@@ -1,7 +1,7 @@
 <div class="dish-card">
   <% if dish.photo %>
     <div class="dish-card-polaroid">
-      <%= cl_image_tag dish.photo.path, crop: :fill %>
+      <%= cl_image_tag dish.photo.path, height: 200, crop: :fill %>
       <div class="dish-card-category">
         <h2><%= dish.name%></h2>
         <p><%= dish.description %></p>

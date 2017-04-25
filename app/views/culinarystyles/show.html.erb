@@ -1,5 +1,5 @@
 <div class="culinarystyle-show">
-  <div class="cl-banner" style="background-image: url(<%= cloudinary_url @culinarystyle.banerpic.path %>)">
+  <div class="cl-banner" style="background-image: url(<%= cloudinary_url @culinarystyle.banerpic.path, ĥeight: 300, crop: :fill; %>)">
     <h1><%= @culinarystyle.name.capitalize %></h1>
   </div>
 </div>
@@ -9,7 +9,7 @@
     <div class="col-xs-12 col-sm-2">
       <div class="logo-spec text-center">
         <% if @culinarystyle.fontpic? %>
-          <%= cl_image_tag @culinarystyle.fontpic.path, width: 150, height: 150, crop: :fill %>
+          <%= cl_image_tag @culinarystyle.fontpic.path, height: 150, crop: :fill %>
         <% end %>
       </div>
     </div>
