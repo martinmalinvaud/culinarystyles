@@ -1,0 +1,61 @@
+.culinarystyle-banner {
+  min-height: 200px;
+  background-color: rgba(#d33d27 , 1);
+  h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 44px;
+
+  }
+  p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 44px;
+  }
+}
+
+.culinarystyle-show {
+  padding: 0;
+
+  h1 {
+    position:relative;
+    padding-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+    font-size: 50px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid #fff;
+      width: 30px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .cl-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+  }
+}

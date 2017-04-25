@@ -1,11 +1,40 @@
-<h2><%= @culinarystyle.name %></h2>
-<p><%= @culinarystyle.description %></p>
-<% if @culinarystyle.piccard? %>
-      <%= cl_image_tag @culinarystyle.piccard.path, width: 200, height: 300, crop: :fill %>
-    <% end %>
+<div class="culinarystyle-show">
+  <div class="cl-banner" style="background-image: url(<%= cloudinary_url @culinarystyle.banerpic.path %>)">
+    <h1><%= @culinarystyle.name.capitalize %></h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-2">
+      <div class="logo-spec text-center">
+        <% if @culinarystyle.fontpic? %>
+          <%= cl_image_tag @culinarystyle.fontpic.path, width: 150, height: 150, crop: :fill %>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="col-xs-12 col-sm-8">
+      <p><%= @culinarystyle.description %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-2">
+      <div class="logo-spec text-center">
+        <h2>Spécialité:</h2>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+    <br>
+      <p>#To DO </p>
+    </div>
+  </div>
+</div>
+
 <%= link_to "Delete", culinarystyle_path(@culinarystyle),
       method: :delete,
-      data: { confirm: "T'es sur de vouloir supprimer un DISH ???" } %>
+      data: { confirm: "T'es sur de vouloir supprimer un DISH ??? je vais te casser la tête !!!" } %>
 
 <% @dishes.each do | dish | %>
   <h1><%= dish.name %></h1>

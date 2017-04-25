@@ -48,6 +48,6 @@ class CulinarystylesController < ApplicationController
   end
 
   def culinarystyle_params
-    params.require(:culinarystyle).permit(:name, :description, :piccard)
+    params.require(:culinarystyle).permit(:name, :description, :piccard, :banerpic, :fontpic)
   end
 end

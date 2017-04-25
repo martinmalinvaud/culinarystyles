@@ -1,13 +1,29 @@
 
-<br>
-<% @culinarystyles.each do |culinarystyle| %>
-  <div class="col-sm-6 center">
-    <h2><%= culinarystyle.name %></h2>
-    <p><%= culinarystyle.description %></p>
-    <%= link_to culinarystyle.name, culinarystyle_path(culinarystyle) %>
+<div class="culinarystyle-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 margin-50-top">
+        <h1>Un réseau de 800 Foodtrucks à travers toute la France</h1>
+        <p>
+          Food Truck Agency, spécialiste du Food Truck en France, vous propose plus de 30 styles culinaires différents et des formules de 10 à 20€ / personne.
+          Découvrez des possibilités culinaires aussi nombreuses que qualitatives (à partir de 80 personnes) !
+        </p>
+      </div>
+    </div>
   </div>
+</div>
+<div class="container">
+  <div class="row">
+    <% @culinarystyles.each do |culinarystyle| %>
+      <div class="col-xs-12 col-sm-6 col-lg-3">
+        <%= render "culinarystyles/card", culinarystyle: culinarystyle %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<% end %>
+
+<br><br>
 <br><br>
 <%= link_to "new", new_culinarystyle_path(@culinarystyle) %>
 

@@ -1,0 +1,14 @@
+#btn-discover {
+  color: white;
+  background-color: #d33d27;
+  border: 2px solid #d33d27;
+  border-radius: 3px;
+  padding: 4px 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#btn-discover:hover {
+  color: #d33d27;
+  background-color: transparent;
+}
